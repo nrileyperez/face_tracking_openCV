@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Face Tracker</title>
+</head>
+<body>
+  <h1>Face‑Tracking Video Processor</h1>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <ul class="flashes">
+      {% for category, message in messages %}
+        <li class="{{ category }}">{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+  <form method="POST" enctype="multipart/form-data">
+    <input type="file" name="video" accept="video/*" required>
+    <button type="submit">Upload & Process</button>
+  </form>
+
+  {% if processed_video %}
+    <h2>Result:</h2>
+    <video width="640" controls>
+      <source src="{{ process_video }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  {% endif %}
+</body>
+</html>

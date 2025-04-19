@@ -1,0 +1,28 @@
+# Byte‑compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env
+.env.*
+
+# PyCharm project files
+.idea/
+
+# Logs and runtime files
+*.log
+
+# Uploaded videos and processed output
+static/uploads/
+static/processed/
+
+# macOS files
+.DS_Store
+
+# Windows thumbnail cache
+Thumbs.db
+
+# Editor backups
+*~
